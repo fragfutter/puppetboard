@@ -7,21 +7,21 @@ from setuptools import setup, find_packages
 from puppetboard.version import __version__
 
 
-with codecs.open('README.rst', encoding='utf-8') as f:
+with codecs.open('README.md', encoding='utf-8') as f:
     README = f.read()
 
-with codecs.open('CHANGELOG.rst', encoding='utf-8') as f:
+with codecs.open('CHANGELOG.md', encoding='utf-8') as f:
     CHANGELOG = f.read()
 
 
 requirements = None
 with open('requirements.txt', 'r') as f:
-    requirements = [line.rstrip()
+    requirements = [line.strip()
                     for line in f.readlines() if not line.startswith('-')]
 
 requirements_test = None
 with open('requirements-test.txt', 'r') as f:
-    requirements_test = [line.rstrip() for line in f.readlines()
+    requirements_test = [line.strip() for line in f.readlines()
                          if not line.startswith('-')]
 
 
